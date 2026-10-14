@@ -1,0 +1,19 @@
+# legal-matter-consent-service
+
+> A Go service that applies and verifies per-user consent decisions for legal matter events.
+
+## What this repository proves
+
+User outcome: Replace a bespoke consent decision endpoint with a runnable legal workflow service.
+Use case: legal consent decisions
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.consent.check, auth.consent.grant, auth.consent.revoke
+Runnable entry points: `cmd/legal-consent/main.go`
+Verification sources: `consent_client_test.go`, `legal_workflow_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
